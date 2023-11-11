@@ -1,26 +1,23 @@
 <template>
-    <div>
-      <label for="name">Enter your name:</label>
-      <input type="text" id="name" v-model="userName" />
-  
-      <div v-if="userName">
-        <p>Hello, {{ userName }}!</p>
-      </div>
-  
-      <div v-else>
-        <p>Please enter your name.</p>
-      </div>
-    </div>
-  </template>
-  
-  <script>
+  <div>
+    <BaseCondition />
+  </div>
+
+  <div>
+    <BaseLoop />
+  </div>
+</template>
+
+<script>
+  import BaseLoop from './BaseLoop.vue';
+  import BaseCondition from './BaseCondition.vue';
+
   export default {
-    data() {
-      return {
-        userName: ""
-      };
-    }
+    components: {
+      BaseCondition,
+      BaseLoop,
+    },
   };
-  </script>
+</script>
   
   
